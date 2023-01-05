@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>Count</title>
+        <script>
+            if (!localStorage.getItem('counter')) {
+                localStorage.setItem('counter', 0);
+            }
+
+          
+            function count() {
+                let counter = localStorage.getItem('counter');
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+                localStorage.setItem('counter', counter);
+                if (counter === 0) {
+                    alert(`Count is ready to go!`)
+                }
+                if (counter === 60) {
+                    alert(`Round 1 Complete`)
+                }
+                if (counter === 120) {
+                    alert(`Round 2 Complete`)
+                }
+                if (counter === 180) {
+                    alert(`Round 3 Complete`)
+                }
+                if (counter === 240) {
+                    alert(`Round 4 Complete`)
+                }
+                if (counter === 300) {
+                    alert(`Round 5 Complete`)
+                }
+                if (counter === 360) {
+                    alert(`Round 6 Complete`)
+                }
+                if (counter === 420) {
+                    alert(`Round 8 Complete`)
+                }
+                if (counter === 480) {
+                    alert(`Round 9 Complete`)
+                }
+                if (counter === 540) {
+                    alert(`Round 10 Complete`)
+                }
+             
+            }
+
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').onclick = count;
+                setInterval(count, 1000);
+            })
+        </script>
+    </head>
+    <body>
+        <strong><h2>Burpees Timer</strong></h2>
+        <h1>0</h1>
+        <button onclick="count()">Stop</button>
+    </body>
+</html>
