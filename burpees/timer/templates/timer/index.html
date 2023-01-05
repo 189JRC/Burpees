@@ -5,44 +5,47 @@
         <title>Count</title>
         <script>
             if (!localStorage.getItem('counter')) {
-                localStorage.setItem('counter', 0);
+                localStorage.setItem('counter', 601);
             }
 
           
             function count() {
                 let counter = localStorage.getItem('counter');
-                counter++;
+                counter--;
                 document.querySelector('h1').innerHTML = counter;
                 localStorage.setItem('counter', counter);
                 if (counter === 0) {
-                    alert(`Count is ready to go!`)
+                    alert(`Finished!`)
                 }
                 if (counter === 60) {
-                    alert(`Round 1 Complete`)
+                    alert(`1 Round to go`)
                 }
                 if (counter === 120) {
-                    alert(`Round 2 Complete`)
+                    alert(`2 Rounds to go`)
                 }
                 if (counter === 180) {
-                    alert(`Round 3 Complete`)
+                    alert(`3 Rounds to go`)
                 }
                 if (counter === 240) {
-                    alert(`Round 4 Complete`)
+                    alert(`4 Rounds to go`)
                 }
                 if (counter === 300) {
-                    alert(`Round 5 Complete`)
+                    alert(`5 Rounds to go`)
                 }
                 if (counter === 360) {
-                    alert(`Round 6 Complete`)
+                    alert(`6 Rounds to go`)
                 }
                 if (counter === 420) {
-                    alert(`Round 8 Complete`)
+                    alert(`7 Rounds to go`)
                 }
                 if (counter === 480) {
-                    alert(`Round 9 Complete`)
+                    alert(`8 Rounds to go`)
                 }
                 if (counter === 540) {
-                    alert(`Round 10 Complete`)
+                    alert(`9 Rounds to go`)
+                }
+                if (counter === 600) {
+                    alert(`10 Rounds to go`)
                 }
              
             }
@@ -50,13 +53,26 @@
         
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('button').onclick = count;
-                setInterval(count, 1000);
+                setInterval(count, 601);
             })
+
         </script>
+
     </head>
     <body>
-        <strong><h2>Burpees Timer</strong></h2>
-        <h1>0</h1>
-        <button onclick="count()">Stop</button>
+        <div class="w-50 p-3" style="background-color: #eee;">
+                <u><h2>Burpees Timer</u></h2>
+                <h2>You must complete 10 burpees within 60 second intervals.</h2>
+                <h4>You will be notified at the start of each round.</h4>
+                <h4>Take as long as you need to recover, then acknowledge the message, then do another 10 burpees.</h4>
+                <h4>There are 10 rounds in total.</h4>
+                <h4>You have 100 burpees to do total.</h4>
+                <h4>This is your daily quota.</h4>
+                <h4>Enjoy</h4>
+            <h1>601</h1>
+            <button onclick="count()">Stop</button>
+            <br>
+        </div>
     </body>
 </html>
+
